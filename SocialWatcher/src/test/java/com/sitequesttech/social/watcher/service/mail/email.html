@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org"> 
+    <head> 
+        <title th:remove="all">Social Watcher</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    </head> 
+    <body> 
+        <p th:text="#{greeting(${name})}"> 
+        </p>         
+         
+        <p>Matched queries are:</p> 
+        <ul th:remove="all-but-first"> 
+            <li th:each="hobby : ${hobbies}" th:text="${hobby}"></li>              
+        </ul> 
+        
+    </body> 
+</html> 

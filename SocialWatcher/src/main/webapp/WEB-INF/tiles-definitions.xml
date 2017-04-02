@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<!-- Default Template -->
+	<definition name="generic-template" template="/WEB-INF/views/layouts/default.jsp">
+		<put-attribute name="title-content" value="" />
+		<put-attribute name="navbar-content" value="/WEB-INF/views/sections/navbar.jsp" />
+		<put-attribute name="custom-css" value=""/>
+		<put-attribute name="main-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/views/sections/footer.jsp" />
+		<put-attribute name="custom-js" value=""/>
+	</definition>
+
+	<!-- Login page -->
+	<definition name="loginPage" extends="generic-template">
+		<put-attribute name="title-content" value="Login" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/login.jsp" />
+	</definition>
+
+	<!-- Home page -->
+	<definition name="homePage" extends="generic-template">
+		<put-attribute name="title-content" value="Home" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/home.jsp" />
+	</definition>
+	
+	<!-- Exception caught Page -->
+	<definition name="exception-caught" extends="generic-template">
+		<put-attribute name="title-content" value="Exception" />
+		<put-attribute name="main-content" value="/WEB-INF/views/errors/exception-caught.jsp" />
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: USER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Users list page -->
+	<definition name="usersPage" extends="generic-template">
+		<put-attribute name="title-content" value="Users" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/User/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/User/List.jsp"/>
+	</definition>
+
+	<!-- New User page -->
+	<definition name="createUserPage" extends="generic-template">
+		<put-attribute name="title-content" value="New User" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/User/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/User/Create.jsp"/>
+	</definition>
+
+	<!-- Update User page -->
+	<definition name="updateUserPage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit User" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/User/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/User/Update.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: USER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: ROLE PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Role list page -->
+	<definition name="rolesPage" extends="generic-template">
+		<put-attribute name="title-content" value="Roles" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Role/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Role/List.jsp"/>
+	</definition>
+
+	<!-- New Role page -->
+	<definition name="createRolePage" extends="generic-template">
+		<put-attribute name="title-content" value="New Role" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Role/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Role/Create.jsp"/>
+	</definition>
+
+	<!-- Update Role page -->
+	<definition name="updateRolePage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Role" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Role/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Role/Update.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	<!-- End: ROLE PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: AUDIT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- Audit to Review List page -->
+	<definition name="auditToReviewListPage" extends="generic-template">
+		<put-attribute name="title-content" value="Audit to Review" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Audit/ToReview/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Audit/ToReview/List.jsp"/>
+	</definition>
+	
+	<!-- Audit to Review Update page -->
+	<definition name="auditToReviewUpdatePage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Audit to Review" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Audit/ToReview/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Audit/ToReview/Update.jsp"/>
+	</definition>
+	
+	<!-- Audit by Review List page -->
+	<definition name="auditByReviewListPage" extends="generic-template">
+		<put-attribute name="title-content" value="Audit By Review" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Audit/ByReview/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Audit/ByReview/List.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: AUDIT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: REPORT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Report list page -->
+	<definition name="listReportPage" extends="generic-template">
+		<put-attribute name="title-content" value="Report By Query" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Report/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Report/List.jsp"/>
+	</definition>
+
+	<!-- New Report page -->
+	<definition name="createReportPage" extends="generic-template">
+		<put-attribute name="title-content" value="Report By Query" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Report/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Report/Create.jsp"/>
+	</definition>
+	
+	<definition name="exportPage" extends="generic-template">
+		<put-attribute name="title-content" value="Report By Query" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Report/Export.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Report/Export.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	<!-- End: REPORT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: CLIENT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Users Client page -->
+	<definition name="clientsPage" extends="generic-template">
+		<put-attribute name="title-content" value="Clients" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Client/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Client/List.jsp"/>
+	</definition>
+
+	<!-- New Client page -->
+	<definition name="createClientPage" extends="generic-template">
+		<put-attribute name="title-content" value="New Client" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Client/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Client/Create.jsp"/>
+	</definition>
+
+	<!-- Update Client page -->
+	<definition name="updateClientPage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Client" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Client/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Client/Update.jsp"/>
+	</definition>
+	
+	<!-- Assign User page -->
+	<definition name="assignUserPage" extends="generic-template">
+		<put-attribute name="title-content" value="Assign User" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Client/AssignUser.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Client/AssignUser.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: CLIENT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: SOCIAL MEDIA PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Social Media page -->
+	<definition name="socialMediaPage" extends="generic-template">
+		<put-attribute name="title-content" value="Social Media" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/SocialMedia/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/SocialMedia/List.jsp"/>
+	</definition>
+
+	<!-- New Social Media page -->
+	<definition name="createSocialMediaPage" extends="generic-template">
+		<put-attribute name="title-content" value="New Social Media" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/SocialMedia/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/SocialMedia/Create.jsp"/>
+	</definition>
+
+	<!-- Update Social Media page -->
+	<definition name="updateSocialMediaPage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Social Media" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/SocialMedia/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/SocialMedia/Update.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: SOCIAL MEDIA PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: CLIENT USER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- Client User page -->
+	<definition name="clientUserPage" extends="generic-template">
+		<put-attribute name="title-content" value="User By Client" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/ClientUser/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/ClientUser/List.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: CLIENT USER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: MASTER QUERY PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- Master Query  Create page -->
+	<definition name="masterQueryCreatePage" extends="generic-template">
+		<put-attribute name="title-content" value="Query" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/MasterQuery/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/MasterQuery/Create.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: MASTER QUERY PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: PARTNER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Partner page -->
+	<definition name="listPartnerPage" extends="generic-template">
+		<put-attribute name="title-content" value="Partner" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Partner/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Partner/List.jsp"/>
+	</definition>
+
+	<!-- New Partner page -->
+	<definition name="createPartnerPage" extends="generic-template">
+		<put-attribute name="title-content" value="New Partner" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Partner/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Partner/Create.jsp"/>
+	</definition>
+
+	<!-- Update Client page -->
+	<definition name="updatePartnerPage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Partner" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Partner/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Partner/Update.jsp"/>
+	</definition>
+	
+	<!-- Assign Client page -->
+	<definition name="assignClientPage" extends="generic-template">
+		<put-attribute name="title-content" value="Assign Client" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Partner/AssignClient.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Partner/AssignClient.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: PARTNER PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: PARTNER CLIENT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- Partner Client page -->
+	<definition name="clientByPartnerPage" extends="generic-template">
+		<put-attribute name="title-content" value="Client By Partner" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/PartnerClient/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/PartnerClient/List.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: PARTNER CLIENT PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Start: APPLICATION PROPERTIES PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- Application Properties list page -->
+	<definition name="applicationPropertiesPage" extends="generic-template">
+		<put-attribute name="title-content" value="Properties" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/customCss/dataTablesStyles.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Property/List.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Property/List.jsp"/>
+	</definition>
+
+	<!-- New Application Properties page -->
+	<definition name="createApplicationPropertyPage" extends="generic-template">
+		<put-attribute name="title-content" value="New Property" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Property/Create.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Property/Create.jsp"/>
+	</definition>
+
+	<!-- Update Application Properties page -->
+	<definition name="updateApplicationPropertyPage" extends="generic-template">
+		<put-attribute name="title-content" value="Edit Property" />
+		<put-attribute name="main-content" value="/WEB-INF/views/contents/Property/Update.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/customJs/Property/Update.jsp"/>
+	</definition>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- End: APPLICATION PROPERTIES PAGES -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+</tiles-definitions>
